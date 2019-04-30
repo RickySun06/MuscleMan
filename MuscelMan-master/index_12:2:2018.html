@@ -1,0 +1,488 @@
+<html>
+  <head>
+    <title>running2win.com | How To Videos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="online running log,running log,running club,running shoes,running,training forums,training log,team running log,journal,running log,interactive,training forums,high school cross country,collage running,running clubs,run logger,run journal,running tips,trail running,weight loss,health,partner,running for beginners,jogging,speed walking,cross country running,racing,5k,10k,15k,3.1 miles,6.2 miles,half marathon,marathon,800,1600,3200,5000,10000,track events,running camps,exercise,equipment,boston marathon,chicago marathon, new york marathon,distance running,race news,race results,hall of fame,running camps,coaching,heart rate monitor training,cross training,penn relays">
+    <meta name="description" content="Comprehensive, Free Online Running Log for New Runners to Experience Runners, Running Clubs, Running Forums, News and Results, Calculators for Tracking Performance">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/rtwin-main_26.css?v=1.0" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="MapHiLight.js?v=1.1"></script>
+    <script type="text/javascript" src="cvi_map_lib.js"></script>
+    <script type="text/javascript" src="wz_jsgraphics.js"></script>
+    <script type="text/javascript">$(function(){
+      $('.map').maphilight();
+    //$('.map').maphilight({ groupBy: 'quad' });
+    //   $.fn.maphilight.defaults = {
+    //    groupBy: 'rel'
+    // }
+    $('.map').maphilight({
+      fade: false, groupBy: 'id'
+    });
+    $('#closemodal').click(function() {
+      $('#modalwindow').modal('hide');
+    });
+    // $('#quad, #GluteusMinimusMuscle, #LliacusMuscle, #LliopsoasMuscle, #PectineusMuscle, #AdductorLongusMuscle, #GracilisMuscle, #SartoriusMuscle, #VastusLateralisMuscle, #VastusMedialisMuscle, #GastrocnemiusMuscle_MedialHead, #TibialisPosteriorMuscle, #ExtensorDigitorumLongusMuscle, #PeroneusLongusMuscle, #GluteusMaximusMuscle, #SemitendinosusMuscle, #SemimembranosusMuscle, #AdductorMagnusMuscle, #GastrocnemiusMuscle_LateralHead, #SoleusMuscle, #Calcaneal_Achilles_Tendon, #BicepsFemorisMuscle_LongHead').click(function(e) {
+    //             e.preventDefault();
+    //             var data = $(this).mouseout().data('maphilight') || {};
+    //             data.alwaysOn = !data.alwaysOn;
+    //             $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
+    //             $("body").disableSelection();
+    //       });
+    });
+      //$('.map').maphilight({ groupBy: 'quad' });
+      //$('.map').maphilight({fade: true, groupBy: 'alt'});
+      // $('map').maphilight({
+      //     groupBy: 'rel'
+      // });
+      // $('.map').mouseover(function() {
+      //    $('map[id="'+$(this).attr('id')+'"]').mouseover();
+
+      // });
+      
+    </script>
+
+  <script>
+    var currentSide = 0;
+    var lock = false;
+    var lastClicked = '';
+    var $g = function(id) { return document.getElementById(id); }
+    
+    function writeText(txt) { 
+      if(lock == false) $g("Details").innerHTML = $g(txt).innerHTML; //tabDetails
+    }
+    function clearFields() { 
+      if(lock == false) $g("Details").innerHTML = ""; //tabDetails
+    }
+    function toggleLock(txt) {
+      if(txt == lastClicked) {
+        reset();
+      } else {
+        lock = true;
+        lastClicked = txt;
+        $g("Details").innerHTML = $g(txt.split(";")[0]).innerHTML;  //tabDetails
+      }
+      return false;
+    }
+    function reset() {
+      lock = false;
+      lastClicked = '';
+      clearFields();
+    }
+    $(function() {
+      $(".heart").on("click", function() {
+        $(this).toggleClass("heart-blast");
+      });
+    }); 
+ 
+  </script>
+  
+  </head>
+    <style type="text/css">
+    .card{
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      border-radius: 2px;
+      border: 1px solid #eee;
+    }
+    #round {
+        border-radius: 5px;
+        border: 1px solid #ef5e2f;
+        padding: 20px; 
+        width: 200px;
+        height: 150px;    
+    }
+    .heart {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        transform: translate(875%, -45%);
+        background: url(http://imagizer.imageshack.com/img923/4545/XdJDuY.png) no-repeat;  
+        cursor: pointer;
+  
+    }
+    .heart-blast {
+        background-position: -2800px 0;
+        transition: background 1s steps(28);
+    }
+  </style>
+
+  <body style="width:"970px">
+   
+  <div class="separete-header"></div>
+  <div class="container mar-t30">
+    
+    <div class="col-sm-12">
+      <img class="map" id="Human" name="Human" src="LowerBody.jpg" usemap="#m_HumanFront" onmousemove="clearFields();" onclick="javascript:reset();" alt=""><br />
+    </div>
+
+    <nav>
+      <div class="col-sm-12">
+        <ul class="nav nav-tabs" data-tabs="nav-tab">
+          <li><a data-toggle="tab" href="#Details">Details</a></li>
+          <li><a data-toggle="tab" href="#Strength">Strength</a></li>
+          <li><a data-toggle="tab" href="#Injury">Injury</a></li>
+       <!-- <li role="presentation" class="active"><a href="#Details" data-toggle="tab"><strong>Details</strong></a></li>
+        <li role="presentation" class="active"><a href="#Strength" data-toggle="tab"><strong>Strength</strong></a></li>
+        <li role="presentation" class="active"><a href="#Injury" data-toggle="tab"><strong>Injury</strong></a></li>
+      -->
+        <!--<div> inj </div>=-->
+      </ul>
+    </nav>
+    
+
+      <div class="tab-content" style="border-left:solid 1px lightgrey;border-right:solid 1px lightgrey;border-bottom:solid 1px lightgrey;">
+        <div class="tab-pane active" id="Details" role="tabpanel"></div>
+        <div class="tab-pane" id="Strength" role="tabpanel"></div>
+        <div class="tab-pane" id="Injury" role="tabpanel">
+
+          <div class = "card" id="round" style="width: 100%">
+          <table>
+            <tr>
+              <td align="center" rowspan="2" style="border-right: solid 1px #eee" valign="top"><img height="65" width="90" src='calf.gif'><hr/>tryan</td>
+              <td valign="top">Rectus femoris occupies the middle of the thigh, covering most of the other three quadriceps muscles. It originates on the ilium. It is named from its straight course. That's the big chunk of muscle that you feel the most after a solid day of wallballs and squat cleans. :D There are three more though...and they're just as important and will feel just as tender.</td>
+            </tr>
+            <tr>
+              <td valign="bottom" align="right"><div class="heart"></div><!-- <input id="toggle-heart" type="checkbox"/><label for="toggle-heart">❤</label><span style="cursor: pointer;"  onclick="javascript:alert('clicked');" class=emoji>&#x2661;</span> --> 576</td>
+            </tr>
+          </table>
+          
+        </div>
+      <br>
+        <div class = "card" id = "round" style="width: 100%">
+          <table>
+            <tr>
+              <td align="center" rowspan="2" style="border-right: solid 1px #eee" valign="top"><img height="65" width="90" src='calf.gif'><hr/>tryan</td>
+              <td valign="top">Rectus femoris occupies the middle of the thigh, covering most of the other three quadriceps muscles. It originates on the ilium. It is named from its straight course. That's the big chunk of muscle that you feel the most after a solid day of wallballs and squat cleans. :D There are three more though...and they're just as important and will feel just as tender.</td>
+            </tr>
+            <tr>
+              <td valign="bottom" align="right"><div class="heart"></div>577</td>
+            </tr>
+          </table>
+          
+        </div>
+      <br>
+
+        <div class="container">
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Comments</button>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Comment</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Comment:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-target="#hint" data-toggle="modal" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="modal fade" id="hint" role="dialog">
+      <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-body">Your comment is under review, it will post once it approved</div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>         
+     </div>
+   </div>
+  </div>
+  </div>
+  </div>
+  
+</div>
+        </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+    <map name="m_HumanFront">
+      <area part="Right leg Quad" id="quad" shape="poly" href="javascript:toggleLock('quadTxt;A');" onmouseover="writeText('quadTxt');" coords="141,11,144,34,147,46,151,60,156,76,163,90,166,97,167,111,168,125,169,137,168,149,168,157,167,169,166,178,150,183,146,172,141,161,136,148,133,131,129,110,129,93,128,72,132,55,136,40,140,28" alt="">
+      <area part="Left leg Quad" alt="" id="quad" shape="poly" href="javascript:toggleLock('quadTxt;B');" onmouseover="writeText('quadTxt');" coords="242,18,240,24,241,33,243,41,245,49,249,57,250,65,252,72,252,80,253,90,253,100,253,109,253,119,251,126,250,134,248,141,247,148,245,157,243,165,239,173,236,181,235,189,232,188,227,192,223,195,218,193,216,187,215,173,213,163,213,154,214,138,213,124,214,113,215,105,217,99,220,91,222,84,225,77,227,69,229,62,230,55,234,47,236,39,237,31" />
+      <area part="Right Gluteus Minimus Muscle(Front)" alt="" id="GluteusMinimusMuscle" shape="poly" href="javascript:toggleLock('gluteusMinimusMuscleTxt;A');" onmouseover="writeText('gluteusMinimusMuscleTxt');" coords="128,0,139,2,139,11,140,20,140,28,138,35,134,41,131,48,128,54,123,63,120,74,117,82,116,90,114,73,116,58,117,46,119,32,121,24,124,15,124,5,124,1"/>
+      <area part="Left Gluteus Minimus Muscle(Front)" alt="" id="GluteusMinimusMuscle" shape="poly" href="javascript:toggleLock('gluteusMinimusMuscleTxt;B');" onmouseover="writeText('gluteusMinimusMuscleTxt');" coords="251,0,255,16,259,31,261,45,264,59,265,73,265,82,265,90,260,79,254,67,250,56,245,44,241,32,240,24,240,15,243,5">
+      <area part="Right Lliacus Muscle(Front)" alt="" id="LliacusMuscle" shape="poly" href="javascript:toggleLock('LliacusMuscleTxt;A');" onmouseover="writeText('LliacusMuscleTxt');" coords="145,3,149,15,152,28,155,41,158,36,158,25,158,17,153,10" />
+      <area part="Left Lliacus Muscle(Front)" alt="" id="LliacusMuscle" shape="poly" href="javascript:toggleLock('LliacusMuscleTxt;B');" onmouseover="writeText('LliacusMuscleTxt');" coords="237,7,232,16,230,26,227,35,225,44,223,47,222,40,221,30,222,23,225,17,229,11,235,4"  />
+      <area part="Right Lliopsoas Muscle(Front)" alt="" id="LliopsoasMuscle" shape="poly" href="javascript:toggleLock('LliopsoasMuscleTxt;A');"  onmouseover="writeText('LliopsoasMuscleTxt');" coords="159,20,158,29,158,38,156,46,157,52,160,58,163,49,165,44,165,41,166,38,164,34"   />
+      <area part="Left Lliopsoas Muscle(Front)" alt="" id="LliopsoasMuscle" shape="poly" href="javascript:toggleLock('LliopsoasMuscleTxt;B');"  onmouseover="writeText('LliopsoasMuscleTxt');" coords="222,24,221,35,222,44,223,53,220,58,219,58,215,52,213,46,213,40,215,35" />
+      <area part="Left Pectineus Muscle(Front)" alt="" id="PectineusMuscle" shape="poly" href="javascript:toggleLock('PectineusMuscleTxt;A');"  onmouseover="writeText('PectineusMuscleTxt');"  coords="212,47,215,56,219,63,217,69,214,76,211,69,208,65,209,58"  />
+      <area part="Right Pectineus Muscle(Front)" alt="" id="PectineusMuscle" shape="poly" href="javascript:toggleLock('PectineusMuscleTxt;B');"  onmouseover="writeText('PectineusMuscleTxt');" coords="166,44,163,51,160,57,163,64,166,72,168,67,170,61,169,56"   />
+      <area part="Left Adductor Longus Muscle(Front)" id="AdductorLongusMuscle" shape="poly" href="javascript:toggleLock('AdductorLongusMuscleTxt;A');"  onmouseover="writeText('AdductorLongusMuscleTxt');" coords="208,63,210,73,214,78,209,87,205,99,202,110,199,118,198,129,197,140,197,150,194,133,194,125,195,112,194,102,197,90,200,82,203,73"   />
+      <area part="Right Adductor Longus Muscle(Front)" id="AdductorLongusMuscle" shape="poly" href="javascript:toggleLock('AdductorLongusMuscleTxt;B');" onmouseover="writeText('AdductorLongusMuscleTxt');" coords="171,61,178,73,182,85,186,98,188,111,187,120,186,128,184,136,185,143,181,125,183,121,181,113,180,107,176,95,174,90,172,84,169,79,167,74,167,69" />
+      <area part="Left Gracilis Muscle(Front)" id="GracilisMuscle" shape="poly" href="javascript:toggleLock('GracilisMuscleTxt;A');" onmouseover="writeText('GracilisMuscleTxt');" coords="194,65,202,54,207,47,212,41,211,54,206,62,204,70,201,77,198,84,196,91,195,99,194,107,194,116,193,123,194,132,192,125,191,118,191,109,191,99,192,91,192,83,192,75" />
+      <area part="Right Gracilis Muscle(Front)" id="GracilisMuscle" shape="poly" href="javascript:toggleLock('GracilisMuscleTxt;B');" onmouseover="writeText('GracilisMuscleTxt');" coords="168,42,174,52,179,60,183,66,187,75,188,85,188,93,188,99,188,108,189,123,186,113,186,102,185,94,184,88,183,82,178,75,175,66,171,61"/>
+      <area part="Right Sartorius Muscle(Front)" id="SartoriusMuscle" shape="poly" href="javascript:toggleLock('SartoriusMuscleTxt;A');" onmouseover="writeText('SartoriusMuscleTxt');" coords="145,2,151,25,153,37,159,54,165,69,170,82,175,95,179,110,182,126,184,137,184,146,184,155,180,137,176,124,172,110,167,101,160,89,154,75,152,62,149,51,146,41,144,29,142,16,141,4"    />
+      <area part="Left Sartorius Muscle(Front)" id="SartoriusMuscle" shape="poly" href="javascript:toggleLock('SartoriusMuscleTxt;B');" onmouseover="writeText('SartoriusMuscleTxt');" coords="243,2,241,18,236,33,234,45,232,56,227,71,225,81,218,93,213,105,210,115,206,126,205,139,201,151,199,165,198,155,196,148,199,134,201,120,203,111,206,102,212,89,215,82,217,72,220,61,225,48,226,39,229,32,211,86,209,96,207,98,214,81,226,45,228,37"  />
+      <area part="Right Vastus Lateralis Muscle(Front)" id="VastusLateralisMuscle" shape="poly" href="javascript:toggleLock('VastusLateralisMuscleTxt;A');" onmouseover="writeText('VastusLateralisMuscleTxt');" coords="134,46,129,62,128,76,128,90,128,102,130,117,131,130,135,144,139,158,143,167,148,177,150,185,150,194,146,200,145,207,143,208,139,203,137,193,134,183,130,172,127,161,125,149,122,135,119,126,118,115,117,105,114,95,116,89,119,83,122,74,125,66,126,62"  />
+      <area part="Left Vastus Lateralis Muscle(Front)" id="VastusLateralisMuscle" shape="poly" href="javascript:toggleLock('VastusLateralisMuscleTxt;B');" onmouseover="writeText('VastusLateralisMuscleTxt');"  coords="245,45,253,58,257,72,262,85,264,95,264,106,263,116,262,127,261,136,258,145,257,154,254,162,253,170,251,177,250,183,247,192,246,201,244,207,241,211,237,205,236,199,234,193,233,190,235,185,237,177,241,170,244,162,247,152,250,140,252,129,254,119,254,105,254,94,253,84,252,75,252,70,251,65"   />
+      <area part="Right Vastus Medialis Muscle(Front)" id="VastusMedialisMuscle" shape="poly" href="javascript:toggleLock('VastusMedialisMuscleTxt;A');" onmouseover="writeText('VastusMedialisMuscleTxt');" coords="167,101,172,114,176,127,178,139,181,150,182,158,182,168,183,176,183,187,182,192,181,197,177,200,174,203,170,201,169,195,166,187,169,181,169,169,170,156,170,147,170,139,169,131,169,121,168,116"     />
+      <area part="Left Vastus Medialis Muscle(Front)" id="VastusMedialisMuscle" shape="poly" href="javascript:toggleLock('VastusMedialisMuscleTxt;B');" onmouseover="writeText('VastusMedialisMuscleTxt');" coords="214,108,213,122,213,136,213,152,213,163,215,173,216,182,217,191,216,199,214,205,211,209,205,205,203,202,201,195,199,187,199,178,199,169,200,161,201,154,203,146,205,138,206,131,208,123,210,117"     />
+      <area part="Right Gastrocnemius Muscle (Medial Head)(Front)" id="GastrocnemiusMuscle_MedialHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_MedialHeadTxt;A');" onmouseover="writeText('GastrocnemiusMuscle_MedialHeadTxt');" coords="177,244,179,256,184,271,182,278,182,288,182,298,181,309,180,320,179,331,179,340,177,337,175,325,172,307,170,294,170,281,170,271,170,264,173,256"   />
+      <area part="Left Gastrocnemius Muscle (Medial Head)(Front)" id="GastrocnemiusMuscle_MedialHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_MedialHeadTxt;B');" onmouseover="writeText('GastrocnemiusMuscle_MedialHeadTxt');" coords="206,250,210,261,213,270,214,280,213,289,213,301,212,311,211,323,210,330,210,338,209,346,208,349,205,341,206,330,203,321,203,312,202,303,201,294,201,286,202,279,201,271,203,262" />
+      <area part="Right Tibialis Posterior Muscle(Front)" id="TibialisPosteriorMuscle" shape="poly" href="javascript:toggleLock('TibialisPosteriorMuscleTxt;A');" onmouseover="writeText('TibialisPosteriorMuscleTxt');" coords="145,222,149,234,151,246,155,259,157,273,159,283,162,298,164,308,166,322,170,335,170,344,168,352,165,341,159,329,156,322,152,310,148,299,146,287,144,277,144,270,142,260,141,250,141,242,140,237,140,233"      />
+      <area part="Left Tibialis Posterior Muscle(Front)" id="TibialisPosteriorMuscle" shape="poly" href="javascript:toggleLock('TibialisPosteriorMuscleTxt;B');" onmouseover="writeText('TibialisPosteriorMuscleTxt');" coords="238,229,242,238,243,247,243,258,242,266,241,277,240,288,239,297,237,306,234,317,232,324,228,332,226,342,222,350,219,360,217,369,213,366,212,365,215,355,217,339,220,330,220,320,222,313,224,306,226,297,227,286,228,277,228,271,230,264,233,254,234,248,235,242" />
+      <area part="Right Extensor Digitorum Longus Muscle(Front)" id="ExtensorDigitorumLongusMuscle" shape="poly" href="javascript:toggleLock('ExtensorDigitorumLongusMuscleTxt;A');" onmouseover="writeText('ExtensorDigitorumLongusMuscleTxt');" coords="139,234,140,245,142,259,142,268,144,279,146,291,149,303,152,313,157,324,160,335,163,351,166,362,165,367,158,368,156,366,151,356,149,344,146,333,145,321,143,311,141,302,139,292,139,283,138,272,138,264"     />
+      <area part="Left Extensor Digitorum Longus Muscle(Front)" id="ExtensorDigitorumLongusMuscle" shape="poly" href="javascript:toggleLock('ExtensorDigitorumLongusMuscleTxt;B');" onmouseover="writeText('ExtensorDigitorumLongusMuscleTxt');" coords="247,240,248,253,247,260,247,271,247,280,246,293,244,305,242,314,240,326,238,336,237,346,235,354,234,363,232,369,227,370,222,367,223,361,225,348,226,344,227,337,229,331,231,323,233,317,236,311,237,305,239,295,240,287,241,281,242,272,242,264" />
+      <area part="Right Peroneus Longus Muscle(Front)" id="PeroneusLongusMuscle" shape="poly" href="javascript:toggleLock('PeroneusLongusMuscleTxt;A');" onmouseover="writeText('PeroneusLongusMuscleTxt');" coords="135,236,138,233,137,246,137,258,137,272,138,286,139,297,142,309,145,324,143,322,140,314,137,302,134,290,132,280,132,271,133,262,133,254"     />
+      <area part="Left Peroneus Longus Muscle(Front)" id="PeroneusLongusMuscle" shape="poly" href="javascript:toggleLock('PeroneusLongusMuscleTxt;B');" onmouseover="writeText('PeroneusLongusMuscleTxt');" coords="245,239,249,245,250,255,251,266,252,276,251,286,250,294,249,299,248,308,245,316,243,325,241,332,241,326,243,317,243,309,245,303,246,296,248,289,248,279,248,270,248,262" />
+      
+    <!--back-->
+      
+      <area part="Left Gluteus Maximus Muscle(Back)" id="GluteusMaximusMuscle" shape="poly" href="javascript:toggleLock('GluteusMaximusMuscleTxt;A');" onmouseover="writeText('GluteusMaximusMuscleTxt');" coords="554,0,563,9,571,20,575,30,576,38,577,47,576,54,574,62,571,67,568,71,562,75,551,76,542,75,535,73,527,67,522,62,517,53,516,46,516,36,516,28,517,23,521,15,526,8,531,3,535,0" />
+      <area part="Right Gluteus Maximus Muscle(Back)" id="GluteusMaximusMuscle" shape="poly" href="javascript:toggleLock('GluteusMaximusMuscleTxt;B');" onmouseover="writeText('GluteusMaximusMuscleTxt');" coords="617,1,629,11,635,21,639,31,640,38,640,49,638,58,637,65,634,71,632,76,626,80,621,82,608,80,598,79,591,75,583,70,580,64,578,57,578,49,577,42,578,35,581,28,586,20,591,12,596,7,607,0"    />
+      <area part="Left Vastus Lateralis Muscle(Back)" id="VastusLateralisMuscle" shape="poly" href="javascript:toggleLock('VastusLateralisMuscleTxt;C');" onmouseover="writeText('VastusLateralisMuscleTxt');" coords="510,58,514,73,516,84,516,94,517,102,517,113,516,127,517,140,519,154,519,170,515,159,512,147,508,135,507,121,504,110,505,102,506,92,507,83,506,76"  />
+      <area part="Right Vastus Lateralis Muscle(Back)" id="VastusLateralisMuscle" shape="poly" href="javascript:toggleLock('VastusLateralisMuscleTxt;D');" onmouseover="writeText('VastusLateralisMuscleTxt');" coords="646,64,649,78,649,89,648,101,649,112,648,121,646,129,645,138,643,146,642,155,641,161,641,150,641,141,640,126,641,118,639,108,640,103,640,95,640,87,642,79"  />
+      <area part="Left Biceps Femoris Muscle (Long Head)(Back)" id="BicepsFemorisMuscle_LongHead" shape="poly" href="javascript:toggleLock('BicepsFemorisMuscle_LongHeadTxt;A');" onmouseover="writeText('BicepsFemorisMuscle_LongHeadTxt');" coords="525,80,533,78,543,77,539,84,536,95,535,104,533,114,531,129,533,144,534,156,534,167,535,181,534,188,531,198,529,204,526,212,525,220,524,215,523,205,523,199,521,188,521,181,520,171,519,164,519,155,518,146,517,139,517,132,516,124,516,117,517,107,518,99,518,93,521,87" />
+      <area part="Right Biceps Femoris Muscle (Long Head)(Back)" id="BicepsFemorisMuscle_LongHead" shape="poly" href="javascript:toggleLock('BicepsFemorisMuscle_LongHeadTxt;B');" onmouseover="writeText('BicepsFemorisMuscle_LongHeadTxt');" coords="624,82,633,88,637,98,640,113,640,121,640,132,640,143,639,153,638,164,637,171,637,181,635,188,635,195,636,204,635,213,635,220,630,210,628,200,624,190,624,181,624,171,626,160,625,151,627,145,626,134,626,124,622,113,623,106,621,100,620,94,616,87,614,84"  />
+      <area part="Right Semitendinosus Muscle(Back)" id="SemitendinosusMuscle" shape="poly" href="javascript:toggleLock('SemitendinosusMuscleTxt;A');" onmouseover="writeText('SemitendinosusMuscleTxt');" coords="613,82,618,92,622,103,624,116,625,129,625,143,625,154,624,165,621,174,616,190,613,199,609,208,607,215,604,222,601,229,596,235,595,238,596,229,600,219,603,212,604,205,606,193,607,185,609,175,607,163,608,155,610,146,609,135,608,124,607,116,608,108,607,101,609,95,606,164,609,146,609,121,609,113,609,106"/>
+      <area part="Left Semitendinosus Muscle(Back)" id="SemitendinosusMuscle" shape="poly" href="javascript:toggleLock('SemitendinosusMuscleTxt;B');" onmouseover="writeText('SemitendinosusMuscleTxt');" coords="543,77,537,89,534,106,532,121,533,138,533,152,537,166,543,182,547,194,552,205,557,218,563,229,563,225,559,211,557,203,554,193,550,181,550,169,549,157,549,137,549,125,550,114,552,101,549,93,548,87"/>
+      <area part="Left Semimembranosus Muscle(Back)" id="SemimembranosusMuscle" shape="poly" href="javascript:toggleLock('SemimembranosusMuscleTxt;A');" onmouseover="writeText('SemimembranosusMuscleTxt');" coords="553,113,556,133,559,150,560,164,561,178,563,189,563,200,564,209,565,222,560,214,555,196,553,182,551,169,551,156,550,147,550,136,550,126" />
+      <area part="Right Semimembranosus Muscle(Back)" id="SemimembranosusMuscle" shape="poly" href="javascript:toggleLock('SemimembranosusMuscleTxt;B');" onmouseover="writeText('SemimembranosusMuscleTxt');" coords="606,117,609,129,609,140,609,152,608,162,608,178,607,188,605,197,602,205,600,215,599,224,596,229,597,220,595,207,596,198,598,191,600,179,600,169,600,159,601,150,603,143,603,132"/>
+      <area part="Left Adductor Magnus Muscle(Back)" id="AdductorMagnusMuscle" shape="poly" href="javascript:toggleLock('AdductorMagnusMuscleTxt;A');" onmouseover="writeText('AdductorMagnusMuscleTxt');" coords="548,78,557,76,565,73,572,83,575,93,575,104,574,118,572,127,571,134,570,147,569,154,567,164,567,174,566,181,566,191,564,200,564,196,563,188,562,178,561,171,561,163,560,156,560,147,559,139,557,130,556,122,556,113,554,105,554,98,552,93,551,89,550,85"  />
+      <area part="Right Adductor Magnus Muscle(Back)" id="AdductorMagnusMuscle" shape="poly" href="javascript:toggleLock('AdductorMagnusMuscleTxt;B')" onmouseover="writeText('AdductorMagnusMuscleTxt');" coords="582,72,592,79,601,81,610,82,608,90,607,103,606,113,604,122,602,133,601,142,599,154,598,164,598,176,597,185,596,194,596,204,595,205,594,194,593,186,591,171,589,158,588,147,584,135,583,125,580,118,579,111,578,104,579,94,578,84,578,77"/>
+      <area part="Left Gracilis Muscle(Back)" id="GracilisMuscle" shape="poly" href="javascript:toggleLock('GracilisMuscleTxt;C');" onmouseover="writeText('GracilisMuscleTxt');" coords="575,120,573,134,572,145,571,155,571,166,572,176,572,187,572,200,570,208,570,221,568,229,565,225,565,213,565,204,566,193,567,183,567,174,569,161,569,151,570,142,571,135"  />
+      <area part="Right Gracilis Muscle(Back)" id="GracilisMuscle" shape="poly" href="javascript:toggleLock('GracilisMuscleTxt;D');" onmouseover="writeText('GracilisMuscleTxt');" coords="582,120,584,134,587,148,589,162,591,178,593,192,594,204,594,214,595,224,594,236,590,228,589,214,585,200,586,191,587,175,585,160" />
+      <area part="Left Semimembranosus Muscle(Back)" id="SemimembranosusMuscle" shape="poly" href="javascript:toggleLock('SemimembranosusMuscleTxt;C');" onmouseover="writeText('SemimembranosusMuscleTxt');" coords="535,170,536,181,540,190,544,199,550,209,554,215,552,207,547,197,542,186,539,176"     />
+      <area part="Right Semimembranosus Muscle(Back)" id="SemimembranosusMuscle" shape="poly" href="javascript:toggleLock('SemimembranosusMuscleTxt;D');" onmouseover="writeText('SemimembranosusMuscleTxt');" coords="624,166,624,178,623,186,622,193,618,198,617,204,612,211,608,217,608,213,612,207,615,200,616,193,619,189,620,183" />
+      <area part="Left Gastrocnemius Muscle (Medial Head)(Back)" id="GastrocnemiusMuscle_MedialHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_MedialHeadTxt;C');" onmouseover="writeText('GastrocnemiusMuscle_MedialHeadTxt');" coords="549,207,554,218,561,227,566,234,567,243,569,253,569,263,571,272,573,284,571,292,571,301,570,310,562,307,558,303,553,299,551,295,549,290,547,286,545,281,545,273,545,266,544,258,544,253,543,244,542,237,543,230,542,224,542,218,542,216,543,213,545,209" />
+      <area part="Right Gastrocnemius Muscle (Medial Head)(Back)" id="GastrocnemiusMuscle_MedialHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_MedialHeadTxt;D');" onmouseover="writeText('GastrocnemiusMuscle_MedialHeadTxt');" coords="613,209,617,218,618,227,618,240,619,253,619,267,619,277,618,285,616,295,613,301,607,309,602,314,596,315,593,316,591,307,589,295,590,283,591,274,592,266,593,257,594,249,594,244,594,241,597,236,602,230,605,224,608,219,610,214" />
+      <area part="Left Gastrocnemius Muscle (Lateral Head)(Back)" id="GastrocnemiusMuscle_LateralHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_LateralHeadTxt;A');" onmouseover="writeText('GastrocnemiusMuscle_LateralHeadTxt');" coords="530,199,535,208,540,215,543,223,543,232,544,242,543,253,544,263,545,274,546,285,546,292,543,301,539,305,536,306,531,303,526,297,524,290,522,283,522,276,523,267,523,258,524,249,524,241,524,232,524,226,525,219,527,214,528,209"/>
+      <area part="Right Gastrocnemius Muscle (Lateral Head)(Back)" id="GastrocnemiusMuscle_LateralHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_LateralHeadTxt;B');" onmouseover="writeText('GastrocnemiusMuscle_LateralHeadTxt');" coords="629,206,633,216,636,225,635,234,636,243,637,252,638,262,640,269,639,280,640,289,638,298,636,307,631,309,625,306,621,301,620,297,619,291,619,281,620,269,621,259,620,249,620,241,619,233,618,226,619,222,622,217,625,213" />
+      <area part="Left Peroneus Longus Muscle(Back)" id="PeroneusLongusMuscle" shape="poly" href="javascript:toggleLock('PeroneusLongusMuscleTxt;C');" onmouseover="writeText('PeroneusLongusMuscleTxt');" coords="525,303,528,316,533,327,535,339,538,348,541,359,541,368,544,366,542,355,540,346,537,334"/>
+      <area part="Right Peroneus Longus Muscle(Back)" id="PeroneusLongusMuscle" shape="poly" href="javascript:toggleLock('PeroneusLongusMuscleTxt;D');" onmouseover="writeText('PeroneusLongusMuscleTxt');" coords="636,312,633,320,631,327,628,334,625,342,624,349,623,356,622,365,619,376,622,372,626,363,627,347,629,340"  />
+      <area part="Left Soleus Muscle(Back)" id="SoleusMuscle" shape="poly" href="javascript:toggleLock('SoleusMuscleTxt;A');" onmouseover="writeText('SoleusMuscleTxt');" coords="527,302,533,310,538,320,543,331,547,341,550,349,551,357,552,365,553,374,548,363,547,355,544,347,542,340,538,330,534,320,530,311"  />
+      <area part="Right Soleus Muscle(Back)" id="SoleusMuscle" shape="poly" href="javascript:toggleLock('SoleusMuscleTxt;B');" onmouseover="writeText('SoleusMuscleTxt');" coords="636,307,634,316,632,322,631,328,628,335,624,345,623,350,621,355,619,362,616,369,614,375,615,367,615,360,616,352,618,343,620,339,625,333,627,324,630,319"  />
+      <area part="Left Soleus Muscle(Back)" id="SoleusMuscle" shape="poly" href="javascript:toggleLock('SoleusMuscleTxt;C');" onmouseover="writeText('SoleusMuscleTxt');" coords="569,317,570,326,569,335,569,346,569,354,569,363,570,371,567,378,566,381,565,374,563,361,565,351,565,342"/>
+      <area part="Right Soleus Muscle(Back)" id="SoleusMuscle" shape="poly" href="javascript:toggleLock('SoleusMuscleTxt;D');" onmouseover="writeText('SoleusMuscleTxt');" coords="594,323,598,338,599,347,601,359,601,369,602,379,600,386,599,386,597,380,595,374,596,368,596,360,596,353,596,343,595,338"  />
+      <area part="Left Calcaneal (Achilles) Tendon(Back)" id="Calcaneal_Achilles_Tendon" shape="poly" href="javascript:toggleLock('Calcaneal_Achilles_TendonTxt;A');" onmouseover="writeText('Calcaneal_Achilles_TendonTxt');" coords="547,288,551,296,556,305,565,311,570,310,570,320,568,328,567,337,566,347,564,356,565,365,564,373,565,382,566,392,567,402,564,405,561,402,559,397,556,387,553,377,554,369,551,360,551,351,548,343,544,330,539,321,537,318,535,314,534,309,533,307,537,305,544,301,546,298" />
+      <area part="Right Calcaneal (Achilles) Tendon(Back)" id="Calcaneal_Achilles_Tendon" shape="poly" href="javascript:toggleLock('Calcaneal_Achilles_TendonTxt;B');" onmouseover="writeText('Calcaneal_Achilles_TendonTxt');" coords="619,294,619,303,624,309,631,309,634,308,630,314,629,320,626,325,623,332,620,339,617,347,615,355,615,364,614,372,613,380,612,388,611,396,610,405,608,409,604,411,601,410,600,408,601,400,602,392,603,385,603,377,603,371,602,362,602,354,601,347,598,340,598,333,597,328,597,322,596,318,602,315,607,312,611,308,614,304,615,300" />
+      
+    <!--side-->
+    
+      <area part="Right Gluteus Maximus Muscle(Side)" id="GluteusMaximusMuscle" shape="poly" href="javascript:toggleLock('GluteusMaximusMuscleTxt;E');" onmouseover="writeText('GluteusMaximusMuscleTxt');" coords="860,0,865,10,870,19,874,29,876,37,878,46,876,51,874,58,873,64,870,68,867,73,864,76,863,78,862,79,860,77,856,71,851,65,848,58,846,50,843,42,844,31,846,22,849,14,853,7" />
+      <area part="Right Gluteus Minimus Muscle(Side)" id="GluteusMinimusMuscle" shape="poly" href="javascript:toggleLock('gluteusMinimusMuscleTxt;E');" onmouseover="writeText('gluteusMinimusMuscleTxt');" coords="923,0,936,1,940,9,940,17,940,27,940,36,939,45,938,53,936,61,932,68,930,75,926,83,921,90,919,95,917,97,914,93,912,88,910,83,912,77,913,71,913,66,912,65,910,63,906,59,906,57,907,52,907,47,908,44,914,41,917,34,917,26,921,21,922,17,923,10" />
+      <area part="Right Vastus Lateralis Muscle(Side)" id="VastusLateralisMuscle" shape="poly" href="javascript:toggleLock('VastusLateralisMuscleTxt;E');" onmouseover="writeText('VastusLateralisMuscleTxt');" coords="883,67,888,83,889,95,891,106,896,117,897,128,896,141,895,150,894,164,893,173,893,184,890,191,890,203,890,212,887,204,888,184,890,174,887,157,886,145,883,135,880,125,879,115,877,108,877,103,876,97,876,90,877,82,878,76" />
+      <area part="Right Biceps Femoris Muscle (Long Head)(Side)" id="BicepsFemorisMuscle_LongHead" shape="poly" href="javascript:toggleLock('BicepsFemorisMuscle_LongHeadTxt;C');" onmouseover="writeText('BicepsFemorisMuscle_LongHeadTxt');" coords="864,83,872,93,875,103,878,113,880,125,881,133,884,143,886,154,887,164,887,176,887,187,886,194,887,210,888,216,883,224,880,225,876,214,872,205,870,194,867,185,866,173,867,165,865,154,866,145,865,136,865,128,865,120,865,113,865,103,865,96"  />
+      <area part="Right Semitendinosus Muscle(Side)" id="SemitendinosusMuscle" shape="poly" href="javascript:toggleLock('SemitendinosusMuscleTxt;C');" onmouseover="writeText('SemitendinosusMuscleTxt');" coords="857,75,860,84,863,95,864,111,864,129,864,142,864,158,865,170,864,182,865,192,863,199,862,195,860,182,858,164,855,140,853,126,851,113,854,105,855,96,855,88" />
+      <area part="Right Adductor Magnus Muscle(Side)" id="AdductorMagnusMuscle" shape="poly" href="javascript:toggleLock('AdductorMagnusMuscleTxt;C');" onmouseover="writeText('AdductorMagnusMuscleTxt');" coords="852,110,853,125,855,142,857,159,859,172,860,185,861,197,860,203,858,199,855,190,855,183,854,176,853,163,851,150,852,139,851,132" />
+      <area part="Right Gastrocnemius Muscle (Lateral Head)(Side)" id="GastrocnemiusMuscle_LateralHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_LateralHeadTxt;C');" onmouseover="writeText('GastrocnemiusMuscle_LateralHeadTxt');"" coords="872,206,875,216,878,224,882,232,882,240,881,247,878,255,876,261,874,270,871,276,868,284,863,293,861,302,857,306,851,308,845,304,843,302,841,296,840,286,841,279,843,272,846,260,850,248,852,241,855,235,857,226,861,219,867,214" />
+      <area part="Right Gastrocnemius Muscle (Medial Head)(Side)" id="GastrocnemiusMuscle_MedialHead" shape="poly" href="javascript:toggleLock('GastrocnemiusMuscle_MedialHeadTxt;E');" onmouseover="writeText('GastrocnemiusMuscle_MedialHeadTxt');" coords="852,199,854,209,855,218,858,224,857,232,853,237,850,245,848,255,845,262,842,273,841,281,840,292,841,302,840,302,835,296,833,290,832,280,832,272,833,266,834,260,837,252,841,243,843,234,847,225,848,220,850,211"  />
+      <area part="Right Calcaneal (Achilles) Tendon(Side)" id="Calcaneal_Achilles_Tendon" shape="poly" href="javascript:toggleLock('Calcaneal_Achilles_TendonTxt;C');" onmouseover="writeText('Calcaneal_Achilles_TendonTxt');" coords="840,298,844,305,852,309,858,309,853,317,851,325,849,334,848,345,848,358,847,367,846,376,845,384,844,395,841,397,835,397,834,396,837,393,838,386,839,372,840,363,841,355,840,344,838,332,838,324,838,316,837,309,837,305" />
+      <area part="Right Peroneus Longus Muscle(Side)" id="PeroneusLongusMuscle" shape="poly" href="javascript:toggleLock('PeroneusLongusMuscleTxt;E');" onmouseover="writeText('PeroneusLongusMuscleTxt');" coords="886,241,885,253,885,265,883,279,882,292,880,306,878,319,875,330,873,342,871,351,869,359,866,364,864,369,861,376,858,380,857,386,854,382,855,376,856,369,858,362,857,357,856,352,856,346,856,341,857,335,859,327,860,320,863,313,865,305,868,299,869,294,872,287,876,278,877,269,879,263,882,255" />
+      <area part="Right Soleus Muscle(Side)" id="SoleusMuscle" shape="poly" href="javascript:toggleLock('SoleusMuscleTxt;E');" onmouseover="writeText('SoleusMuscleTxt');" coords="882,241,880,248,877,259,875,266,873,273,870,282,865,291,862,300,860,305,857,311,853,317,851,326,849,335,848,342,847,352,847,363,847,374,848,371,851,350,854,340,855,335,858,326,860,318,866,299,869,288,872,279,875,272,877,265,884,255" />
+      <area part="Right Vastus Lateralis Muscle(Side)" id="VastusLateralisMuscle" shape="poly" href="javascript:toggleLock('VastusLateralisMuscleTxt;F');" onmouseover="writeText('VastusLateralisMuscleTxt');" coords="939,52,938,63,937,75,937,86,936,100,936,110,936,121,935,131,934,144,931,154,931,164,929,169,927,176,924,184,918,193,917,199,913,206,907,211,903,212,899,207,900,202,901,191,902,184,903,174,906,168,906,157,908,148,910,139,911,134,912,126,915,120,916,114,917,110,916,109,917,106,919,101,918,98,920,94,921,89,926,85,929,79,933,71,934,68" />
+      <area part="Right Quad(Side)" id="quad" shape="poly" href="javascript:toggleLock('quadTxt;C');" onmouseover="writeText('quadTxt');" coords="939,52,938,66,937,80,938,96,937,108,936,119,935,129,933,144,932,154,932,163,936,151,939,139,941,128,942,114,943,102,943,90,942,77,943,64,943,60" />
+      <area part="Right Peroneus Longus Muscle(Side)" id="PeroneusLongusMuscle" shape="poly" href="javascript:toggleLock('PeroneusLongusMuscleTxt;F');" onmouseover="writeText('PeroneusLongusMuscleTxt');" coords="889,240,889,252,890,265,889,276,889,285,888,294,888,304,887,314,887,324,885,333,885,342,882,350,882,360,881,367,879,372,877,374,873,373,873,368,874,357,873,350,875,343,877,335,878,326,879,314,880,311,881,304,882,296,883,292,884,282,884,275,885,269,885,260,885,254,886,248,886,244" />
+      <area part="Right Extensor Digitorum Longus Muscle(Side)" id="ExtensorDigitorumLongusMuscle" shape="poly" href="javascript:toggleLock('ExtensorDigitorumLongusMuscleTxt;C');" onmouseover="writeText('ExtensorDigitorumLongusMuscleTxt');" coords="889,238,895,229,899,225,899,238,900,247,897,253,896,261,896,271,894,277,892,286,892,295,891,301,890,298,890,289,890,281,892,274,892,268,890,265,889,258,889,248" />
+    </map>
+
+
+    <div id="quadTxt" style="display:none;">
+      <div style="margin:0 10 0 10;">
+        <br />
+        <img src='quads.jpg' style='float:left; padding-right:25px; padding-bottom:25px;' />
+        <ul>
+          <li>Rectus femoris occupies the middle of the thigh, covering most of the other three quadriceps muscles. It originates on the ilium. It is named from its straight course. That's the big chunk of muscle that you feel the most after a solid day of wallballs and squat cleans. :D There are three more though...and they're just as important and will feel just as tender.
+          </li>
+          <li>Vastus lateralis is on the lateral side of the femur (i.e. on the outer side of the thigh)
+          </li>
+          <li>Vastus medialis is on the medial side of the femur (i.e. on the inner part thigh)
+          </li>
+          <li>Vastus intermedius lies between vastus lateralis and vastus medialis on the front of the femur (i.e. on the top or front of the thigh), but deep to the rectus femoris.
+          </li>
+          </li>
+        <p>All four parts of the quadriceps muscle attach to the patella via your quadriceps tendon. That's the part on top of your knee that will feel particularly tweaky after a round of poorly executed squats.
+        </p>
+        <p>Your quads are used in pretty much all of your movements - as you've noted in eloquently vulgar language directed at yours truly after a particularly grueling day of squats and medicine ball cleans. Walking, running, jumping, sitting, standing, it's all there.
+        </p>
+        <p>Note though - the Rectus Femoris is the one that is also a very powerful hip flexor - because it's the one that attaches to your ilium. This is ESPECIALLY important as you pull yourself down into your squats (by contracting that hip) and as you fire off your quads when you do GHD situps.
+        </p>
+        <p>Because of their size and frequency of use, you'll feel them if you've overworked the quads. Lactic acid is NOT a good friend of the front of your thighs.
+        </p>
+        <p>As you come in and continue your training, your quads are going to get stronger (this is a good thing), and probably more than a little larger. This is fantastic because - to lift heavy you gotta have the muscle to do it.
+        </p>
+        <p>Now, when you hear us talking about contractions and firing off - at least in your legs - you know what we're looking for!
+        </p>
+      </div>
+    </div>
+
+    <div id="calfTxt" style="display:none;">
+      <div style="margin:0 10 10 10;">
+        <br />
+        <img src='calf.gif' style='float:left; padding-right:5px; padding-bottom:5px;'>
+        <strong>Calf Muscle Strain Signs & Symptoms
+        </strong>
+        <br />With a grade one Calf strain the signs may not be present until after the activity is over. There may be a sensation of cramp or tightness and a slight feeling of pain when the muscles are stretched or contracted.
+        <br />
+        <br />With a grade two Calf strain there is immediate pain which is more severe than the pain of a grade one injury. It is confirmed by pain on stretch and contraction of the muscle. A grade two Calf strain is usually sore to touch.
+        <br />
+        <br />A grade three Calf strain is a very serious injury. There is an immediate burning or stabbing pain and the athlete is unable to walk without pain. The muscle is completely torn and there may be a large lump of muscle tissue above a depression where the tear is. After a few days with grade two and three injuries a large bruise will appear below the injury site caused by the bleeding within the tissues.
+        <br />
+        <br />
+        <br />
+        <strong>Calf Muscle Strain Prevention
+        </strong>
+        <br />The following measures may have the effect of reducing the chances of sustaining a muscle strain.
+        <br />
+        <br />Warm up prior to matches and training is thought to decrease muscle stretch injuries because the muscle is more extensible when the tissue temperature has been increased by one or two degrees. A good warm up should last at least 20 minutes - starting gently and finishing at full pace activity. Practising sport specific activities helps tune coordination and prepare mentally for competition.
+        <br />
+        <br />Recovery after training sessions and matches can be enhanced by performing a cool down. This is thought to help muscles get rid of waste products. This is also the ideal time to do stretching exercises.
+        <br />
+        <br />Maintaining good muscle strength and flexibility may help prevent muscle strains. Muscle strength allows a player to carry out match activities in a controlled manner and decreases the uncoordinated movements which can lead to injury. Tight muscles are associated with strains. Stretching is therefore practised to maintain muscle length and prevent injury.
+        <br />
+        <br />Diet can have an affect on muscle injuries. If a player's diet is high in carbohydrate in the 48 hours before a match there will be an adequate supply of the energy that is necessary for muscle contractions. However, if the muscles become short of fuel, fatigue can set in during training or matches. This fatigue can predispose a player to injury. Carbohydrate and fluids can be replenished during training and matches by taking regular sips of a sports drink . Shock absorbing insoles can reduce stress on the Calf muscles and help to prevent Calf muscle injuries.
+        <br />
+        <br />
+        <strong>What you can do
+        </strong>
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Wear shock absorbing insoles to reduce stress on the Calf muscles
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Perform warm up exercises prior to sporting activity
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Perform cool down exercises following sporting activity
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Practise stretching exercises to maintain muscle length
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Sip sports drinks to maintain carbohydrates & fluids
+      </div>
+    </div>
+  <div id="gluteusMinimusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      GluteusMinimusMuscle
+    </div>
+  </div>
+
+  <div id="LliacusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      LliacusMuscle
+    </div>
+  </div>
+
+  <div id="LliopsoasMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      LliopsoasMuscle
+    </div>
+  </div>
+
+  <div id="PectineusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      PectineusMuscle
+    </div>
+  </div>
+
+  <div id="AdductorLongusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      AdductorLongusMuscle
+    </div>
+  </div>
+
+  <div id="GracilisMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      GracilisMuscle
+    </div>
+  </div>
+
+  <div id="SartoriusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      SartoriusMuscle
+    </div>
+  </div>
+
+  <div id="VastusLateralisMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      VastusLateralisMuscle
+    </div>
+  </div>
+
+  <div id="VastusMedialisMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      VastusMedialisMuscle
+    </div>
+  </div>
+
+  <div id="GastrocnemiusMuscle_MedialHeadTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      GastrocnemiusMuscle_MedialHead
+    </div>
+  </div>
+
+  <div id="TibialisPosteriorMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      TibialisPosteriorMuscle
+    </div>
+  </div>
+
+  <div id="ExtensorDigitorumLongusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      ExtensorDigitorumLongusMuscle
+    </div>
+  </div>
+
+  <div id="PeroneusLongusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      PeroneusLongusMuscle
+    </div>
+  </div>
+
+  <div id="GluteusMaximusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      GluteusMaximusMuscle
+    </div>
+  </div>
+
+  <div id="SemitendinosusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      SemitendinosusMuscle
+    </div>
+  </div>
+
+  <div id="SemimembranosusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      SemimembranosusMuscle
+    </div>
+  </div>
+
+  <div id="AdductorMagnusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      AdductorMagnusMuscle
+    </div>
+  </div>
+
+  <div id="GastrocnemiusMuscle_LateralHeadTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      GastrocnemiusMuscle_LateralHead
+    </div>
+  </div>
+
+  <div id="SoleusMuscleTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      SoleusMuscle
+    </div>
+  </div>
+
+  <div id="Calcaneal_Achilles_TendonTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      Calcaneal_Achilles_Tendon
+    </div>
+  </div>
+
+  <div id="BicepsFemorisMuscle_LongHeadTxt" style="display:none;">
+    <div style="margin:0 10 10 10;">
+      BicepsFemorisMuscle_LongHead
+    </div>
+  </div>
+  </body>
+</html>
